@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess 'n Sketch-register</title>
+        <!-- css and java script -->
+        <link rel="stylesheet" href="page_one_style.css">
+    </head>
+    <body>
+        <div id="container-register">
+            <div id="title">
+                Register
+            </div>
+    
+            <form>
+                <div class="input">
+                    <div class="input-addon">
+                        <img src="/images/email.png" class="material-icons" width="23px">
+                    </div>
+                    <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
+                </div>
+    
+                <div class="input">
+                    <div class="input-addon">
+                        <img src="/images/username.png" class="material-icons" width="23px">
+                    </div>
+                    <input id="username" placeholder="Username" type="text" required class="validate" autocomplete="off">
+                </div>
+    
+                <div class="input">
+                    <div class="input-addon">
+                        <img src="/images/password.png" class="material-icons" width="23px">
+                    </div>
+                    <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
+                </div>
+    
+                <div class="remember-me">
+                    <input type="checkbox">
+                    <span style="color: #DDD">I accept Terms of Service</span>
+                </div>
+    
+                <input type="submit" value="Register" />
+            </form>
+            <div class="register">
+                Do you already have an account?
+                <a href="#"><button id="register-link">Log In here</button></a>
+            </div>
+        </div>
+    </body>
+</html>
