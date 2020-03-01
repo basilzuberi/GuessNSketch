@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Guess n' Sketch</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="game_page_style.css" />
+      <script src="socket.io/socket.io.js"></script>
+      <script src="client.js"></script>
+      <script src="//code.jquery.com/jquery-3.4.1.js"></script>
+   </head>
+   <body>
+      <div id="main">
+         <h1>Game Room</h1>
+         <div id="secret-word" class="draw hidden" style = "display:block">
+            <p>
+               Draw:  <span class="word">TEST</span>
+            </p>
+         </div>
+         <div class = "row">
+            <div class = "players">
+               <ul><p>Players:</p></ul>
+            </div>
+            <canvas id = "canvas" width="300px" height="200px"></canvas>
+            <div class="guess">
+                  <ul><p>Chat:</p></ul>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
