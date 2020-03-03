@@ -3,6 +3,8 @@ body {
     padding: 0;
     font-family: 'Raleway', sans-serif;
     color: #F2F2F2;
+    background-image: url("images/88104536_2760035104065568_1474591388023652352_n.jpg");
+    background-size: 20%;
 }
 
 #container-login {

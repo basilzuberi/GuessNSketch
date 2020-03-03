@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess 'n Sketch-private game settings</title>
+        
+         <link rel="stylesheet" href="settings.css">
+        
+        
+        
+    </head>
+
+    
+    <body>
+      <div class="settings">
+        <div id="title" >
+            <h3>Settings</h1>
+        </div>
+        <div class="lobby_container">
+            <div id="lobby_settings">
+                <div id="settings">
+                    <div id="name">
+                        Lobby
+                    </div>
+                    <div id="content_lobby">
+                        <div id="content_setting">
+                            <div class="form-group">
+                                <label>Rounds</label>
+                                <input type="number" id="rounds" name="rounds" min="1" max="100">
+                            </div>
+                            <div class="form-group">
+                                <label>number of people</label>
+                                <input type="number" id="peopleNum" name="peopleNum" min="1" max="5">
+                            </div>
+                            <div class="form-group">
+                                <label>Draw time in seconds</label>
+                                <input type="number" id="drawingPerSec" name="drawingPerSec" min="1" max="1000">
+                            </div>
+                            <div class="form-group">
+                                <label>Custom Words</label>
+                                <textarea id="text-area" placeholder="Type your custom words here separated by a comma. (Minimum of 4 words, maximum of 30 characters per word)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </body>
+</html>
