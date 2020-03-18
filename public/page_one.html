@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="page_one_style.css">
     </head>
     <body>
+
         <div id="container-login">
             <div id="title">
                 Login
@@ -49,7 +50,17 @@
             <div id="Register_guest">
                 dont have an account ?<br>
                 <a href="page_two.html" id="reg">Register</a>
-                <a href="game_page.html" id="guest">Play as Guest</a>
+                <a id="guest" onclick="rand_name()" href="#">Play as Guest</a>
+                <script>
+                    function rand_name(){
+                        var value1=Math.random()* 1000;
+                        value1 = Math.ceil(value1);
+                        // alert(value1);
+                        var queryString = "?user=" + value1;
+                        window.location.href = "game_page.html" + queryString;
+                    }
+                    
+                </script>
             </div>
         </div>
     </body>

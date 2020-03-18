@@ -1,0 +1,7 @@
+database: done
+css: issa - friday
+server: basically done
+client: basically done
+login/registration authentication: login-basil / registration-hamdan
+save scores: 
+drawing: 
