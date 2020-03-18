@@ -11,6 +11,7 @@ A Pictionary game created with teammates for Internet Computing class. stay tune
 
 -run "npm install socket.io" (gives us ability to create a server that lets multiple clients connect)
 
+-run "npm install mongodb --save" (for the game database)
 
 The .gitignore file helps us not include the Node Package files when we commit the project.
 
