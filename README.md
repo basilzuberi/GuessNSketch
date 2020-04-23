@@ -13,6 +13,10 @@ A Pictionary game created with teammates for Internet Computing class. stay tune
 
 -run "npm install mongodb --save" (for the game database)
 
+-run "npm i mongoose" (game database manager)
+
+-run "npm install passport" (authentication)
+
 The .gitignore file helps us not include the Node Package files when we commit the project.
 
 This way we can keep the modules on our computers and not have random files inside the Git Repository.
