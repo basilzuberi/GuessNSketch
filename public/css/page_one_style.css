@@ -5,30 +5,27 @@ body {
     color: #F2F2F2;
     background-image: url("../img/game_bg.jpg");
     background-size: 20%;
+    position: relative;
 }
 
 #container-login {
     background-color: #1D1F20;
-    position: relative;
-    top: 20%;
-    margin: auto;
-    width: 340px;
-    height: 445px;
+    width: 20rem;
+    height: 30rem;
     border-radius: 0.35em;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin: 5em auto;
 }
 
 #container-register {
     background-color: #1D1F20;
-    position: relative;
-    top: 20%;
-    margin: auto;
-    width: 340px;
-    height: 480px;
+    width: 20rem;
+    height: 30rem;
     border-radius: 0.35em;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
+    margin: 5em auto;
 }
 
 #title {
@@ -44,86 +41,163 @@ body {
 
 .input {
     margin: auto;
-    width: 240px;
-    border-radius: 4px;
+    width: 16rem;
     background-color: #373b3d;
-    padding: 8px 0px;
+    padding: 0.5em 0.5em;
     margin-top: 15px;
+}
+
+#email {
+    width: 80%;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #373b3d;
+    border-top: 1px solid #373b3d;
+    border-left: 1px solid #373b3d;
+    border-right: 1px solid #373b3d;
+    border-bottom: 3px solid #33B4FF;
+    padding: 6px 0px;
+}
+
+#email:focus {
+    outline-style: none;
+}
+
+#email::placeholder {
+    color: #fff;
+}
+
+#username {
+    width: 80%;
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #373b3d;
+    border-top: 1px solid #373b3d;
+    border-left: 1px solid #373b3d;
+    border-right: 1px solid #373b3d;
+    border-bottom: 3px solid #33B4FF;
+    padding: 6px 0px;
+}
+
+#username:focus {
+    outline-style: none;
+}
+
+#username::placeholder {
+    color: #fff;
+}
+
+#password {
+    width: 80%;
+    font-size: 0.8em;
+    color: #fff;
+    border-top: 1px solid #373b3d;
+    border-left: 1px solid #373b3d;
+    border-right: 1px solid #373b3d;
+    border-bottom: 3px solid #33B4FF;
+    background-color: #373b3d;
+    padding: 6px 0px;
+}
+
+#password:focus {
+    outline-style: none;
+}
+
+#password::placeholder {
+    color: #fff;
 }
 
 .input-addon {
     float: left;
     background-color: #373b3d;
     border: 1px solid #373b3d;
-    padding: 4px 8px;
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.50em;
+    margin: -0.5em 0 0 -0.45em;
+    border-right: 0.1em solid rgba(255, 255, 255, 0.04);
+    
 }
 
 input[type=checkbox] {
     cursor: pointer;
 }
 
-input[type=text] {
-    color: #949494;
-    margin: 0;
-    background-color: #373b3d;
-    border: 1px solid #373b3d;
-    padding: 6px 0px;
-    border-radius: 3px;
-}
-
-input[type=text]:focus {
-    border: 1px solid #373b3d;
-}
-
-input[type=password] {
-    color: #949494;
-    margin: 0;
-    background-color: #373b3d;
-    border: 1px solid #373b3d;
-    padding: 6px 0px;
-    border-radius: 3px;
-}
-
-input[type=password]:focus {
-    border: 1px solid #373b3d;
-}
-
-input[type=email] {
-    color: #949494;
-    margin: 0;
-    background-color: #373b3d;
-    border: 1px solid #373b3d;
-    padding: 6px 0px;
-    border-radius: 3px;
-}
-
-input[type=email]:focus {
-    border: 1px solid #373b3d;
-}
 
 .forgot-password {
-    position: relative;
-    bottom: 0%;
-    margin-top: 20px;
+    margin-top: 1em;
+    font-size: 0.85em;
+}
+
+.forg-pass {
+    color: #FFFAFA;
+    text-decoration: none;
+}
+
+.forg-pass:hover {
+    color: #fefefed7;
+}
+
+.forg-pass:visited {
+    color: #fefefec0;
 }
 
 .remember-me {
-    margin: 20px 0;
+    margin: 1.5em 0 0.7em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-input[type=submit] {
-    padding: 6px 25px;
-    background: #373E4A;
-    color: #C1C3C6;
-    font-weight: bold;
-    border: 0 none;
+.login-btn {
+    width: 60%;
+    height: 2.3rem;
     cursor: pointer;
-    border-radius: 3px;
+    background-color: #33B4FF;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.1em;
+    color: #fff;
 }
+
+.login-btn:hover {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.login-btn:focus {
+    outline: none;
+    background-color: #33abff;
+    transform: translateY(1.5px);
+}
+
+
+.register-btn {
+        width: 60%;
+        height: 2rem;
+        margin-top: 0.8em;
+        margin-bottom: -0.4em;
+        cursor: pointer;
+        background-color: #33B4FF;
+        border: none;
+        border-radius: 35px;
+        font-size: 1.1em;
+        color: #fff;
+    
+}
+
+.register-btn:hover {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.register-btn:focus {
+    outline-style: none;
+    background-color: #33abff;
+    transform: translateY(1.5px);
+}
+
 
 .register {
-    margin: auto;
+    margin: -2.2em auto;
     padding: 16px 0;
     text-align: center;
     margin-top: 40px;
@@ -131,15 +205,23 @@ input[type=submit] {
     border-top: 1px solid #C1C3C6;
 }
 
+#no-account {
+    margin-bottom: 0.35em;
+}
 
+#have-account {
+    margin-bottom: 0.35em;
+}
 
-#register-link {
-    margin-top: 10px;
-    padding: 6px 25px;
-    background: #373E4A;
-    color: #C1C3C6;
-    font-weight: bold;
-    border: 0 none;
-    cursor: pointer;
-    border-radius: 3px;
+.register_link {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #33B4FF;
+}
+
+.register_link:hover {
+    color: rgba(25, 169, 252, 0.973);
+}
+#player{
+    display: none;
 }

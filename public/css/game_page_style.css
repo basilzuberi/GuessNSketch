@@ -253,4 +253,6 @@ label[for="pencil"], input[type="range"]{
   .userName{
     margin-left: 20px;
 }
-
+#player{
+    display: none;
+}

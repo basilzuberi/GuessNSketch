@@ -8,6 +8,9 @@ const {generateMessage} = require('./functions/message');
 const {TimeLimit} = require('./functions/time');
 const {Img} = require('./functions/img'); 
 
+const bodyParser = require('body-parser');
+const InitiateMongoServer = require('../config/db');
+
 const publicPath = path.join(__dirname, '../public');
 const port = process.env.PORT || 3000;
 
@@ -15,6 +18,18 @@ let app = express();
 let server = http.createServer(app);
 let io = socketIO(server);
 app.use(express.static(publicPath));
+
+//------------connecting to the database--------
+InitiateMongoServer();
+// --------------body parser----------------------
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+// ----------------------------------------
+app.use('/user', require('../routes/user'));
+// ---------------------------------------
 
 let users = new Users();
 let words = new Words();
