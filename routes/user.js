@@ -11,9 +11,8 @@ router.post("/signup",
     .not()
     .isEmpty(),
     check("email","please enter a valid email").isEmail(),
-    check("password","please enter a valid password").isLength({
-        min:6
-    })
+    
+    
 ],
 async (req, res) => {
     const errors = validationResult(req);
@@ -27,6 +26,8 @@ async (req, res) => {
         email,
         password
     } = req.body;
+
+    
     // console.log(req.body);
     // res.redirect('../public/game_room.html');
     try {
@@ -43,6 +44,8 @@ async (req, res) => {
             email,
             password
         });
+
+        
 
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
@@ -100,6 +103,7 @@ router.post("/login",
     }
 
     const { username, password } = req.body;
+
     try {
       let user = await User.findOne({
         username
@@ -143,5 +147,10 @@ router.post("/login",
       });
     }
   }
+
 );
+
+router.post("/logout", function(req, res){
+  res.redirect("/");
+});
 module.exports = router;

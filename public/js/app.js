@@ -1,10 +1,9 @@
+const User = require("../../model/User");
 let socket = io();
-
 window.onload = enterToTheGame();
 
 // document.getElementById('#guest').addEventListener("click", enterToTheGame);
 document.querySelector("#sendMessage").addEventListener("submit", sendMessage);
-
 let wordSpan = document.createElement("span");
 wordSpan.id = "word";
 let erase = document.querySelector("#erase");

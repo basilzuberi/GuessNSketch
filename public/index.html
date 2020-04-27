@@ -5,11 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Guess 'n Sketch-signin</title>
         <!-- css and java script -->
-        <script src="/public/js/mute_bt.js"></script>
+        <script src="js/mute_bt.js"></script>
         <link rel="stylesheet" href="css/mute.css">
         <link rel="stylesheet" href="css/page_one_style.css">
     </head>
     <body>
+      <div>
+        <!-- mute button -->
+        <a href="#" id="speaker" onclick="muteSite()" class="speaker">
+          <span class="oi oi-volume-high" width="500px"></span>
+        </a>
+      </div>
         <div id="container-login">
             <div id="title">
                 Login
@@ -30,7 +36,7 @@
                     <div class="input-addon">
                         <img src="./img/password.png" class="material-icons" width="25px">
                     </div>
-                    <input name="password" id="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" type="password" required class="validate" autocomplete="off">
+                    <input name="password" id="password" placeholder="Password (min 6 characters)" onfocus="this.placeholder=''" onblur="this.placeholder='Password (min 6 characters)'" type="password" required class="validate" autocomplete="off">
                 </div>
     
                 <div class="remember-me">
@@ -115,10 +121,30 @@
             function stopVideo() {
               player.stopVideo();
             }
+
+            function mutePlayer(event) {
+              player.setVolume(0);
+            }
+            function unmutePlayer(event) {
+              player.setVolume(3);
+            }
+
           </script>
-        <!-- mute button -->
-        <a href="#" class="speaker">
-          <span class="oi oi-volume-high" width="500px"></span>
-        </a>
+
+        <script>
+          function muteSite(){
+            var speaker = document.getElementById("speaker");
+            
+
+            if (speaker.classList.contains("mute")){
+              unmutePlayer();
+              speaker.classList.remove("mute")
+            }else{
+              mutePlayer();
+              speaker.classList.add("mute");
+            }
+            
+          }
+        </script>
     </body>
 </html>
