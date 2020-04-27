@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-require('dotenv').config();
+
 // Replace this with your MONGOURI.
-const MONGOURI = process.env.DB_CONN;
+const MONGOURI = 'mongodb+srv://hamdan:gamedb@gamedb-2ci1f.mongodb.net/test?retryWrites=true&w=majority';
 
 const InitiateMongoServer = async () => {
   try {
