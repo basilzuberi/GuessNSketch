@@ -72,7 +72,7 @@ async (req, res) => {
         );
         var str = __dirname.slice(0,67);
         var s = "\\";
-        res.redirect('/game_page.html');
+        res.redirect('/game_page.html?user='+username);
         // console.log("this is the name of the dirc "+__dirname+'./public/game_page');
         // console.log(str+"public"+s+"game_page")
         // res.redirect(str+"public"+s+"game_page.html");
@@ -138,7 +138,7 @@ router.post("/login",
           });
         }
       );
-      res.redirect('/game_page.html');
+      res.redirect('/game_page.html?user='+username);
     } catch (e) {
       console.log("an error has happened in the login");
       // console.error(e);

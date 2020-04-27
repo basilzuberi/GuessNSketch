@@ -1,4 +1,4 @@
-const User = require("../../model/User");
+
 let socket = io();
 window.onload = enterToTheGame();
 
@@ -39,8 +39,14 @@ function enterToTheGame(e) {
 
 
   //if logged in let userName = Logged in user? else username is whatever is below
+  let userName
+  if(queries[1] == ""){
+     userName = document.getElementById("user-list").innerHTML = "Guest"+queries[1];
+  }else{
+    userName = document.getElementById("user-list").innerHTML = queries[1];
+  }
   
-  let userName = document.getElementById("user-list").innerHTML = "Guest"+queries[1];
+
 
 
 
