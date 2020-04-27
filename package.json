@@ -1,24 +1,20 @@
 {
-  "name": "guessnsketch",
+  "name": "pictionary",
   "version": "1.0.0",
-  "description": "A pictionary Game",
+  "description": "Real-time multiplayer game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "test": "mocha server/tests/*.test.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/basilzuberi/GuessNSketch.git"
-  },
-  "author": "Basil Zuberi, Hamdan Kasem, Issa Asbah",
+  "author": "Andrzej",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/basilzuberi/GuessNSketch/issues"
+  "devDependencies": {
+    "expect": "^23.5.0",
+    "mocha": "^5.2.0"
   },
-  "homepage": "https://github.com/basilzuberi/GuessNSketch#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongodb": "^3.5.5",
-    "socket.io": "^2.3.0"
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
   }
 }

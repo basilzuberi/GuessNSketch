@@ -1,0 +1,256 @@
+@import url('reset.css');
+
+*{
+    box-sizing: border-box;
+    color:white;
+}
+body{
+    background-image: url("../img/game_bg.jpg");
+}
+html{
+    font-size: 10px;
+    background-color: rgb(238, 238, 238);
+    font-family: Lato;
+}
+
+.border{
+    border: 1px solid rgb(96, 96, 96);
+    border-radius: 5px;
+}
+  
+#logo{
+    background-image: url("../img/logo.png");
+    width: 750px;
+    height: 250px;
+    background-size: cover;
+}
+
+#userName input[type="text"]{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.container{
+    width: 1300px;
+    height: 965px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+.chatWrapper{
+    flex-grow: 3;
+    max-width: 190px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150px;
+    margin: 30px 5px;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+.usersOnline{
+    flex-grow: 1;
+    text-align: center;
+    overflow-y: auto;
+    border-radius: 5px;
+    height: 30%
+}
+#scoreBoard:first-child{
+    padding-top: 15px;
+}
+.usersOnline p {
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgb(167, 167, 167);
+}
+.usersOnline p .score{
+    float: right;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 5px;
+}
+.chatWindow{
+    flex-grow: 4;
+    overflow-y: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    height: 55%;
+    overflow-x: hidden;
+}
+.chatWindow p{
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 250px;
+
+}
+.chatWindow .guess{
+    margin-left: 5px;
+    text-indent: 2px;
+    word-break: keep-all ;
+    white-space: wrap; 
+    word-wrap: break-word; /*needed for I.E 5.5+ */
+}
+.drawing{
+    flex-grow: 7;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 5px;
+}
+#word{
+    font-weight: bold;
+}
+
+#pwd{
+    margin: 5px 0;
+    float: left;
+    text-indent: 10px;
+}
+#canvas{
+    min-width: 996px;
+    margin-top: 5px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.tools{
+    flex-grow: 0;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.colors{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+div.colors div{
+    margin: 5px 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid black;
+    opacity: 0.5;
+}
+.clicked{
+    opacity: 1 !important;
+}
+
+#red{
+    background-color: red;
+}
+#darkgray {
+    background-color: darkgray;
+}
+#deepskyblue{
+    background-color: deepskyblue;
+}
+#black{
+    background-color: black;
+}
+#limegreen{
+    background-color: limegreen;
+}
+#yellow{
+    background-color: yellow;
+}
+#darkorange {
+    background-color: darkorange;
+}
+#darkorchid {
+    background-color: darkorchid;
+}
+#deeppink {
+    background-color: deeppink;
+}
+#sienna {
+    background-color: sienna;
+}
+#erase{
+    margin: 5px 5px;
+    border-radius: 7px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url("../img/eraser.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+}
+
+label[for="pencil"], input[type="range"]{
+    margin: 7px 5px;
+    float: right;
+}
+
+#messageInput{
+    width: 100%;
+    color:black;
+}
+.message {
+    padding: 5px;
+    list-style-type: none; 
+    word-break: break-all;
+}
+
+.messageTitle {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 1.9rem;
+}
+  
+.messageTitle h4 {
+    font-weight: 600;
+    margin-right: 10px;
+}
+  
+.messageTitle span {
+    color: #999;
+}
+.messageBody {
+    border-bottom: 1px solid gray;
+}
+.messageBody p{
+    margin: -5px 0 0 -1px;
+    font-weight: 500;
+    font-size: 1.9rem;
+    margin-top: 2px;
+}
+.messageBody span{
+    font-style: italic;
+    display: flex;
+    font-weight: 500;
+    font-size: 1.7rem;
+}
+
+.hide{
+    display: none
+}
+
+.brush{
+    position: relative;
+}
+.brush::before{
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 5px;
+    content: " ";
+    position: absolute;
+    background-image: url('../img/paint_brush.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  .userName{
+    margin-left: 20px;
+}
+
