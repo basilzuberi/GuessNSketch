@@ -7,7 +7,7 @@
     "start": "node server/server.js",
     "test": "mocha server/tests/*.test.js"
   },
-  "author": "Andrzej",
+  "author": "basil, hamdan, issa",
   "license": "ISC",
   "devDependencies": {
     "expect": "^23.5.0",
